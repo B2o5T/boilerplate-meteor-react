@@ -1,0 +1,26 @@
+.boxed-view {
+  background-color: $boxed-view-overlay-bg;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center; // vertical align of children
+  justify-content: center; // horizontal align
+}
+.boxed-view--modal {
+  position: fixed; // relative to browser viewport
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: fade-out($boxed-view-overlay-bg, .3);
+}
+.boxed-view__box {
+  width: 24rem;
+  background-color: $boxed-view-bg;
+  padding: 2.4rem;
+  text-align: center;
+}
+.boxed-view__form {
+  display: flex; // default flex direction left to right, we need change to column
+  flex-direction: column;
+}
